@@ -1,0 +1,54 @@
+# https://github.com/pypa/sampleproject/blob/main/pyproject.toml
+[project]
+name = "juseong-sensor-consumer"
+version = "0.0.1"
+authors = [
+    {name = "Bryan \"Beege\" Berry", email = "bryanberry235711@gmail.com"},
+]
+description = "Sample consumer of fake sensor data for Juseong"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["IoT", "testing", "education", "local development"]
+license = {text = "MIT"}
+classifiers = [
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Intended Audience :: Developers",
+    "Topic :: Education",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "requests"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit"
+]
+
+[project.urls]  # Optional
+"Homepage" = "https://github.com/TheBeege/juseong-sensors-consumer"
+"Bug Reports" = "https://github.com/TheBeege/juseong-sensors-consumer/issues"
+"Source" = "https://github.com/TheBeege/juseong-sensors-consumer"
+
+[project.scripts]
+sensors_consumer = "sensors_consumer.main:main"
+
+[build-system]
+# https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
+requires = ["setuptools>=58.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 79
+target-version = [
+    "py311",
+]
+
+[tool.isort]
+profile = "black"
+line_length = 79

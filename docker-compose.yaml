@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  api:
+    image: ghcr.io/thebeege/juseong-fake-sensors:latest
+    ports:
+      - target: 8000
+        published: 8000
+        protocol: tcp
+        mode: host
