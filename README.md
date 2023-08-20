@@ -13,6 +13,7 @@ Normal Python project setup on Linux/MacOS/WSL:
 python -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
+pre-commit install
 ```
 
 ## Usage
@@ -26,7 +27,8 @@ Run the fake sensor via docker-compose:
 docker-compose up
 ```
 
-Add a `-d` for running in the background if you prefer. Don't forget to cleanup if you do this!
+Add a `-d` for running in the background if you prefer. Don't forget to
+cleanup if you do this!
 
 Then open up your browser to the [Swagger docs page](http://127.0.0.1:8000/docs)
 
